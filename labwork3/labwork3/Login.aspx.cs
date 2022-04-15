@@ -27,7 +27,7 @@ namespace labwork3
             if (users.Contains(new KeyValuePair<string, string>(userName, password)))
             {
                 Session["user"] = userName;
-                Server.Transfer("MainPage.aspx");
+                Response.Redirect("MainPage.aspx");
             }
             else
             {

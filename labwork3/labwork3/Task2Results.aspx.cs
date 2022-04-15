@@ -14,7 +14,7 @@ namespace labwork3
         {
             if (Session["permission"] == null)
             {
-                Server.Transfer("MainPage.aspx");
+                Response.Redirect("MainPage.aspx");
             }
             else
             {

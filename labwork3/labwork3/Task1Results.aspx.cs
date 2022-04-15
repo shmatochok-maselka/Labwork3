@@ -14,7 +14,7 @@ namespace labwork3
         {
             if (Session["school"] == null)
             {
-                Server.Transfer("MainPage.aspx");
+                Response.Redirect("MainPage.aspx");
             }
             else
             {
@@ -41,6 +41,7 @@ namespace labwork3
                     });
                 }
                 Task1GridView.DataBind();
+                Session[school] = null;
           }
         }
         public static string ConvertToStringSubjects(List<ZNO> ZNOs)

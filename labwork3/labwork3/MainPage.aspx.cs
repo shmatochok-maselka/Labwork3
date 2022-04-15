@@ -14,12 +14,10 @@ namespace labwork3
         {
             if (!IsPostBack)
             {
-                if (PreviousPage == null  || Session["user"] == null)
+                if (Session["user"] == null)
                 {
                     Response.Redirect("Login.aspx");
                 }
-                Session["permission"] = null;
-                Session["school"] = null;
                 ReadData();
                 StudentsGridView.DataSource = Students.Values.OrderBy(v => v.Name).Select(v => new
                 {

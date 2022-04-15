@@ -6,7 +6,7 @@
     void Task1Button_Click(object sender, EventArgs e)
     {
         Session["school"] = SchoolDropDownList.SelectedValue;
-        Server.Transfer("Task1Results.aspx");
+        Response.Redirect("Task1Results.aspx");
     }
 </script>
 
